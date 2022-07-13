@@ -1,0 +1,10 @@
+POST localhost:8080/category/adm/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTcxMDMxODEsImV4cCI6MTY1NzMxOTE4MSwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjozfQ.iHV745zSft5vNYShCag5ZZn8lXhvpHpXTfJvSGXNZbo
+
+{
+  "name": "dfdf"
+}
+
+###
+GET  localhost:8080/category/public/list

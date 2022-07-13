@@ -1,0 +1,13 @@
+PUT localhost:8080/profile/change_password
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTcxMzQyNzIsImV4cCI6MTY1NzM1MDI3MiwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjo2fQ.rXrrTTgCoL_LCITA4pg2S2mer5tyKZL009zKNMe4BpA
+
+{
+  "oldPassword": "123",
+  "newPassword": "456"
+}
+
+###
+
+GET localhost:8080/profile/get_detail
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTcxMzExNjYsImV4cCI6MTY1NzM0NzE2NiwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjozfQ.aft-CwMpHZzILjlgHJGpsHeBJljxTHkIcduo4ug2rf0

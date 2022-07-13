@@ -1,0 +1,29 @@
+POST localhost:8080/auth/registration
+Content-Type: application/json
+
+{
+  "name": "Vali",
+  "email": "world997dev@mail.ru",
+  "password": "123"
+}
+###
+POST localhost:8080/auth/registration
+Content-Type: application/json
+
+{
+  "name": "Vali",
+  "email": "suxrobbek997@gmail.com",
+  "password": "123"
+}
+
+###
+POST localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "vvv",
+  "password": "456"
+}
+
+###
+GET http://localhost:8080/auth/email/verification/18
