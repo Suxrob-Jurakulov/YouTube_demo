@@ -1,21 +1,20 @@
 package com.company.dto;
 
 import com.company.dto.channel.ChannelDTO;
-import com.company.enums.VisibleStatus;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class PlaylistDTO {
+public class VideoDTO {
     private String id;
     private String name;
     private String description;
-    private VisibleStatus status;
-    private Integer orderNum;
-    private String channel;
-    private ChannelDTO channelDTO;
-    private String review;
+    private LocalDateTime createdDate;
+    private AttachDTO attach;
+    private ChannelDTO channel;
 }

@@ -1,0 +1,16 @@
+POST localhost:8080/playlist/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTc3ODQ1NDYsImV4cCI6MTY1ODAwMDU0NiwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjoxfQ.b3x2UE7lSdr1CqmA9yt4bjw0CkuU6ElDZjJ6xHxf22w
+
+{
+  "name": "OOP",
+  "description": "Object Oriented Programming",
+  "status": "PUBLIC",
+  "orderNum": 1,
+  "channel": "8a8a850381fba7390181fba8eebf0000"
+}
+
+###
+
+DELETE localhost:8080/playlist/delete/8a8a850381fbae7f0181fbae991c0000
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTc3ODQ1NDYsImV4cCI6MTY1ODAwMDU0NiwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjoxfQ.b3x2UE7lSdr1CqmA9yt4bjw0CkuU6ElDZjJ6xHxf22w

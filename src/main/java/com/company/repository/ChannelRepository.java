@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 public interface ChannelRepository extends PagingAndSortingRepository<ChannelEntity, String> {
 
@@ -14,4 +15,8 @@ public interface ChannelRepository extends PagingAndSortingRepository<ChannelEnt
     @Modifying
     @Query(value = "update ChannelEntity set status = ?1 where id = ?2")
     void updateStatus(Status status, String id);
+
+    List<ChannelEntity> findByProfileIdAndVisible(Integer id, boolean b);
+
+
 }

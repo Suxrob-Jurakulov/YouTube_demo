@@ -19,7 +19,7 @@ public class ChannelEntity {
     private String id;
     @Column(nullable = false)
     private String name;
-    @Column(unique = true, nullable = false)
+    @Column(columnDefinition = "TEXT")
     private String description;
     @Column(name = "website_url", columnDefinition = "TEXT")
     private String websiteUrl;

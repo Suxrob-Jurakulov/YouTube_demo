@@ -71,4 +71,10 @@ public class ChannelController {
         channelService.changeStatus(id, dto);
         return ResponseEntity.ok("Changed");
     }
+
+    @GetMapping("/user/channelList")
+    public ResponseEntity<List<ChannelDTO>> list() {
+        List<ChannelDTO> list = channelService.channelList();
+        return ResponseEntity.ok().body(list);
+    }
 }

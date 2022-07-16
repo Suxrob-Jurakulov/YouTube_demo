@@ -26,10 +26,7 @@ import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Calendar;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 public class AttachService {
@@ -195,5 +192,17 @@ public class AttachService {
 
     public boolean isExistAttach(String id) {
         return attachRepository.existsById(id);
+    }
+
+    public AttachDTO getAttach(String channelAttachId) {
+        Optional<AttachEntity> optional = attachRepository.findById(channelAttachId);
+        if (optional.isEmpty()){
+            return null;
+        }
+        AttachEntity entity = optional.get();
+        AttachDTO dto = new AttachDTO();
+        dto.setId(entity.getId());
+        dto.setUrl(serverUrl + getFileFullPath(entity));
+        return dto;
     }
 }

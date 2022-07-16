@@ -33,11 +33,15 @@ public class VideoEntity {
     @Enumerated(EnumType.STRING)
     private VisibleStatus status;
 
+    @Column(name = "attach_id")
+    private String attachId;
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "attach_id")
+    @JoinColumn(name = "attach_id", insertable = false, updatable = false)
     private AttachEntity attach;
+    @Column(name = "channel_id")
+    private String channelId;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "channel_id")
+    @JoinColumn(name = "channel_id", insertable = false, updatable = false)
     private ChannelEntity channel;
 
 }

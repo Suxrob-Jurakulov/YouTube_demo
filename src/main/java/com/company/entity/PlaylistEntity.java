@@ -30,6 +30,8 @@ public class PlaylistEntity {
     @Column
     @Enumerated(EnumType.STRING)
     private VisibleStatus status;
+    @Column
+    private Boolean visible = true;
 
     @Column(name = "channel_id")
     private String channelId;

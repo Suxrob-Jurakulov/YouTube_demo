@@ -1,26 +1,27 @@
 package com.company.service;
 
-import com.company.dto.AttachDTO;
 import com.company.dto.PlaylistDTO;
 import com.company.dto.ProfileDTO;
 import com.company.dto.channel.ChannelDTO;
-import com.company.dto.playlist.PlaylistInfoDTO;
 import com.company.dto.playlist.PlaylistStatusDTO;
 import com.company.entity.ChannelEntity;
 import com.company.entity.PlaylistEntity;
 import com.company.entity.ProfileEntity;
+import com.company.enums.ProfileRole;
 import com.company.exp.BadRequestException;
 import com.company.exp.ItemNotFoundException;
 import com.company.mapper.PlaylistInfo;
 import com.company.repository.PlaylistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class PlaylistService {
@@ -30,6 +31,8 @@ public class PlaylistService {
     private ProfileService profileService;
     @Autowired
     private ChannelService channelService;
+    @Autowired
+    private AttachService attachService;
 
 
     public PlaylistDTO create(PlaylistDTO dto) {
@@ -82,49 +85,92 @@ public class PlaylistService {
     private void checkProfile(String id) {
         ChannelEntity channel = channelService.get(id);
         ProfileEntity profile = profileService.getCurrentUser();
-        if (channel.getProfile() != profile) {
+        if (!Objects.equals(channel.getProfileId(), profile.getId())) {
             throw new BadRequestException("Siz bu kanal egasi emassiz");
         }
     }
 
-    public List<PlaylistInfoDTO> listForAdminByPagination(int page, int size) {
+//    public List<PlaylistInfoDTO> listForAdminByPagination(int page, int size) {
 //        Pageable pageable = PageRequest.of(page, size);
 //        Page<PlaylistInfo> all = playlistRepository.getAllListForAdmin(pageable);
 //
 //        List<PlaylistInfoDTO> list = new LinkedList<>();
-//        all.forEach(entity -> list.add(entityToInfoDto(entity)));
+////        all.forEach(entity -> list.add(entityToInfoDto(entity)));
 //        return list;
-        return null;
+//    }
+
+//    private PlaylistInfoDTO entityToInfoDto(PlaylistInfo entity) {
+//        PlaylistInfoDTO dto = new PlaylistInfoDTO();
+//        dto.setId(entity.getId());
+//        dto.setName(entity.getName());
+//        dto.setDescription(entity.getDescription());
+//        dto.setStatus(entity.getStatus());
+//        dto.setOrderNum(entity.getOrderNum());
+//
+//        ChannelDTO channel = new ChannelDTO();
+//        channel.setId(entity.getChannel().getId());
+//        channel.setName(entity.getChannel().getName());
+//
+//        AttachDTO photo = new AttachDTO();
+//        photo.setId(entity.getChannel().getPhotoId());
+//        photo.setUrl(entity.getChannel().getPhoto().getPath());
+//        channel.setPhoto(photo);
+//
+//        dto.setChannel(channel);
+//
+//        ProfileDTO profile = new ProfileDTO();
+//        profile.setId(entity.getChannel().getProfileId());
+//        profile.setName(entity.getChannel().getProfile().getName());
+//
+//        AttachDTO attachDTO = new AttachDTO();
+//        attachDTO.setId(entity.getChannel().getProfile().getPhoto().getId());
+//        attachDTO.setUrl(entity.getChannel().getProfile().getPhoto().getPath());
+//        profile.setPhoto(attachDTO);
+//        return dto;
+//    }
+
+    public PageImpl<PlaylistDTO> pagination(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        Page<PlaylistInfo> playlistInfoPage = playlistRepository.pagination(pageable);
+        List<PlaylistDTO> dtoList = new LinkedList<>();
+        playlistInfoPage.getContent().forEach(entity -> {
+            dtoList.add(playlistInfo(entity));
+        });
+        return new PageImpl(dtoList, pageable, playlistInfoPage.getTotalElements());
     }
 
-    private PlaylistInfoDTO entityToInfoDto(PlaylistInfo entity) {
-        PlaylistInfoDTO dto = new PlaylistInfoDTO();
+    public PlaylistDTO playlistInfo(PlaylistInfo entity) {
+        PlaylistDTO dto = new PlaylistDTO();
         dto.setId(entity.getId());
-        dto.setName(entity.getName());
+        dto.setOrderNum(entity.getOrders());
         dto.setDescription(entity.getDescription());
         dto.setStatus(entity.getStatus());
-        dto.setOrderNum(entity.getOrderNum());
+        dto.setName(entity.getName());
 
-        ChannelDTO channel = new ChannelDTO();
-        channel.setId(entity.getChannel().getId());
-        channel.setName(entity.getChannel().getName());
+        ChannelDTO channelDTO = new ChannelDTO();
+        channelDTO.setId(entity.getChannelId());
+        channelDTO.setName(entity.getChannelName());
+        channelDTO.setPhoto(attachService.getAttach(entity.getChannelAttachId()));
 
-        AttachDTO photo = new AttachDTO();
-        photo.setId(entity.getChannel().getPhotoId());
-        photo.setUrl(entity.getChannel().getPhoto().getPath());
-        channel.setPhoto(photo);
+        ProfileDTO profileDTO = new ProfileDTO();
+        profileDTO.setId(entity.getProfileId());
+        profileDTO.setName(entity.getProfileName());
+        profileDTO.setPhoto(attachService.getAttach(entity.getProfileAttachId()));
 
-        dto.setChannel(channel);
+        channelDTO.setProfile(profileDTO);
+        dto.setChannelDTO(channelDTO);
 
-        ProfileDTO profile = new ProfileDTO();
-        profile.setId(entity.getChannel().getProfileId());
-        profile.setName(entity.getChannel().getProfile().getName());
-
-        AttachDTO attachDTO = new AttachDTO();
-        attachDTO.setId(entity.getChannel().getProfile().getPhoto().getId());
-        attachDTO.setUrl(entity.getChannel().getProfile().getPhoto().getPath());
-        profile.setPhoto(attachDTO);
-        dto.setProfile(profile);
         return dto;
+    }
+
+    public void delete(String id) {
+        PlaylistEntity entity = get(id);
+        boolean admin = profileService.getCurrentUser().getRole().equals(ProfileRole.ROLE_ADMIN);
+        if(admin){
+            playlistRepository.deletePlaylist(id);
+        }else {
+            checkProfile(entity.getChannelId());
+            playlistRepository.deletePlaylist(id);
+        }
     }
 }

@@ -2,8 +2,8 @@ POST localhost:8080/auth/registration
 Content-Type: application/json
 
 {
-  "name": "Vali",
-  "email": "world997dev@mail.ru",
+  "name": "Suxrob",
+  "email": "suxrobbek997@gmail.com",
   "password": "123"
 }
 ###
@@ -21,9 +21,12 @@ POST localhost:8080/auth/login
 Content-Type: application/json
 
 {
-  "email": "vvv",
-  "password": "456"
+  "email": "world997dev@mail.ru",
+  "password": "123"
 }
 
 ###
 GET http://localhost:8080/auth/email/verification/18
+
+###
+GET http://localhost:8080/auth/resend/email/eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTc5NDUwODAsImV4cCI6MTY1ODE2MTA4MCwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjoxN30.EO6StcseJpeH0nAkNeAVAs4tof1F0Y5oifm5nH1adiE

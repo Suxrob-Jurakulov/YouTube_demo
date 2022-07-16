@@ -172,4 +172,14 @@ public class ChannelService {
         }
         channelRepository.updateStatus(dto.getStatus(), id);
     }
+
+    public List<ChannelDTO> channelList() {
+        ProfileEntity profileEntity = profileService.getCurrentUser();
+        List<ChannelEntity> entityList = channelRepository.findByProfileIdAndVisible(profileEntity.getId(), true);
+        List<ChannelDTO> dtoList = new LinkedList<>();
+        entityList.forEach(entity -> {
+            dtoList.add(entityToDto(entity));
+        });
+        return dtoList;
+    }
 }

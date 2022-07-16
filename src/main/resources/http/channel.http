@@ -1,0 +1,8 @@
+POST localhost:8080/channel/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTc3ODQ1NDYsImV4cCI6MTY1ODAwMDU0NiwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjoxfQ.b3x2UE7lSdr1CqmA9yt4bjw0CkuU6ElDZjJ6xHxf22w
+
+{
+  "name": "Java",
+  "description": "Dasturlash bo'yicha"
+}

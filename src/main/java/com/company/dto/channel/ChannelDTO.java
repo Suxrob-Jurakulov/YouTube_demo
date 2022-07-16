@@ -1,6 +1,7 @@
 package com.company.dto.channel;
 
 import com.company.dto.AttachDTO;
+import com.company.dto.ProfileDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,4 +18,5 @@ public class ChannelDTO {
     private String instagramUrl;
     private AttachDTO photo;
     private AttachDTO banner;
+    private ProfileDTO profile;
 }

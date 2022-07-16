@@ -1,0 +1,13 @@
+POST http://localhost:8080/attach/public/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="Car.png"
+
+< C:\Users\SUKHROB\Desktop\Car.png
+
+###
+GET http://localhost:8080/attach/public/open/524551d1-ca59-4967-9df3-05abe4d9ea1c
+
+###
+GET localhost:8080/attach/public/open/524551d1-ca59-4967-9df3-05abe4d9ea1c

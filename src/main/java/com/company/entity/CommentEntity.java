@@ -24,15 +24,21 @@ public class CommentEntity {
     @Column(name = "update_date")
     private LocalDateTime updateDate;
 
-    @JoinColumn(nullable = false, name = "profile_id")
+    @Column(name = "profile_id")
+    private Integer profileId;
+    @JoinColumn(nullable = false, name = "profile_id", insertable = false, updatable = false)
     @ManyToOne(targetEntity = ProfileEntity.class, fetch = FetchType.LAZY)
     private ProfileEntity profile;
 
-    @JoinColumn(nullable = false, name = "article_id")
+    @Column(name = "video_id")
+    private String videoId;
+    @JoinColumn(nullable = false, name = "article_id", insertable = false, updatable = false)
     @ManyToOne(targetEntity = VideoEntity.class, fetch = FetchType.LAZY)
     private VideoEntity video;
 
-    @JoinColumn(name = "comment_id")
+    @Column(name = "comment_id")
+    private Integer commentId;
+    @JoinColumn(name = "comment_id", insertable = false, updatable = false)
     @ManyToOne(targetEntity = CommentEntity.class, fetch = FetchType.LAZY)
     private CommentEntity comment;
 

@@ -14,5 +14,7 @@ public class CommentDTO {
 
     private ProfileDTO profile;
     private LocalDateTime createdDate;
+    private LocalDateTime updateDate;
+    private CommentDTO comment;
 
 }

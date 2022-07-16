@@ -4,11 +4,13 @@ import com.company.config.CustomUserDetails;
 import com.company.dto.AuthDTO;
 import com.company.dto.ProfileDTO;
 import com.company.dto.RegistrationDTO;
+import com.company.dto.ResponseInfoDTO;
 import com.company.entity.AttachEntity;
 import com.company.entity.ProfileEntity;
 import com.company.enums.ProfileRole;
 import com.company.enums.Status;
 import com.company.exp.BadRequestException;
+import com.company.exp.ItemNotFoundException;
 import com.company.repository.ProfileRepository;
 import com.company.util.JwtUtil;
 import com.company.util.MD5Util;
@@ -64,35 +66,57 @@ public class AuthService {
         CustomUserDetails user = (CustomUserDetails) authenticate.getPrincipal();
         ProfileEntity profile = user.getProfile();
 
-       /* Optional<ProfileEntity> optional = profileRepository.findByEmail(authDTO.getEmail());
-        if (optional.isEmpty()) {
-            throw new BadRequestException("User not found");
-        }
-        ProfileEntity profile = optional.get();
-        if (!MD5Util.getMd5(authDTO.getPassword()).equals(profile.getPassword())) {
-            throw new BadRequestException("User not found");
-        }
-
-        if (!profile.getStatus().equals(ProfileStatus.ACTIVE)) {
-            throw new BadRequestException("No ruxsat");
-        }*/
-
         ProfileDTO dto = new ProfileDTO();
         dto.setName(profile.getName());
         dto.setJwt(JwtUtil.encode(profile.getId()));
 
         return dto;
     }
-    public String emailVerification(Integer id) {
+
+
+//    public String emailVerification(Integer id) {
+//        Optional<ProfileEntity> optional = profileRepository.findById(id);
+//        if (optional.isEmpty()) {
+//            return "<h1>User Not Found</h1>";
+//        }
+//
+//        ProfileEntity profile = optional.get();
+//        profile.setStatus(Status.ACTIVE);
+//        profileRepository.save(profile);
+//        return "<h1 style='align-text:center'>Success. Tabriklaymiz.</h1>";
+//    }
+    public ResponseInfoDTO emailVerification(Integer id) {
+
         Optional<ProfileEntity> optional = profileRepository.findById(id);
         if (optional.isEmpty()) {
-            return "<h1>User Not Found</h1>";
+            return new ResponseInfoDTO(-1, "<h1>User Not Found</h1>");
         }
 
         ProfileEntity profile = optional.get();
+        if (!emailService.verificationTime(profile.getEmail())) {
+            return new ResponseInfoDTO(-1, "<h1>Time is out</h1>");
+        }
         profile.setStatus(Status.ACTIVE);
         profileRepository.save(profile);
-        return "<h1 style='align-text:center'>Success. Tabriklaymiz.</h1>";
+        return new ResponseInfoDTO(1, "<h1 style='align-text:center'>Success. Tabriklaymiz.</h1>");
     }
+
+    public ResponseInfoDTO resendEmail(Integer id) {
+
+        Optional<ProfileEntity> optional = profileRepository.findById(id);
+        if (optional.isEmpty()) {
+            throw new ItemNotFoundException("User not fount");
+        }
+        ProfileEntity profile = optional.get();
+
+        Long count = emailService.countVerificationSending(profile.getEmail());
+        if (count >= 4) {
+            return new ResponseInfoDTO(-1, "limit");
+        }
+
+        emailService.sendRegistrationEmail(profile.getEmail(), profile.getId());
+        return new ResponseInfoDTO(1, "success");
+    }
+
 }
 

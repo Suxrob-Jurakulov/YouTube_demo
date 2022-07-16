@@ -42,4 +42,6 @@ public class ProfileController {
         String response = profileService.updatePhoto(id);
         return ResponseEntity.ok("Successfully changed!");
     }
+
+
 }
