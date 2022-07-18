@@ -27,13 +27,13 @@ public class CommentEntity {
     @Column(name = "profile_id")
     private Integer profileId;
     @JoinColumn(nullable = false, name = "profile_id", insertable = false, updatable = false)
-    @ManyToOne(targetEntity = ProfileEntity.class, fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     private ProfileEntity profile;
 
     @Column(name = "video_id")
     private String videoId;
-    @JoinColumn(nullable = false, name = "article_id", insertable = false, updatable = false)
-    @ManyToOne(targetEntity = VideoEntity.class, fetch = FetchType.LAZY)
+    @JoinColumn(nullable = false, name = "video_id", insertable = false, updatable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
     private VideoEntity video;
 
     @Column(name = "comment_id")

@@ -1,7 +1,7 @@
 package com.company.entity;
 
 import com.company.enums.ProfileRole;
-import com.company.enums.Status;
+import com.company.enums.PositionStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,7 +27,7 @@ public class ProfileEntity {
     private ProfileRole role;
     @Column
     @Enumerated(EnumType.STRING)
-    private Status status;
+    private PositionStatus status;
     @Column
     private Boolean visible = true;
     @Column(name = "created_date")

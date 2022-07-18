@@ -1,5 +1,5 @@
 package com.company.enums;
 
-public enum Status {
+public enum PositionStatus {
     ACTIVE, BLOCK
 }

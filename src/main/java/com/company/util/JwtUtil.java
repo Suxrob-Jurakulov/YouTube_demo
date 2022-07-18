@@ -1,6 +1,5 @@
 package com.company.util;
 
-import com.company.dto.JwtDTO;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;

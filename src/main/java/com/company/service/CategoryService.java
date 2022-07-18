@@ -2,7 +2,7 @@ package com.company.service;
 
 import com.company.dto.CategoryDTO;
 import com.company.entity.CategoryEntity;
-import com.company.enums.Status;
+import com.company.enums.PositionStatus;
 import com.company.exp.BadRequestException;
 import com.company.exp.ItemNotFoundException;
 import com.company.repository.CategoryRepository;
@@ -24,7 +24,7 @@ public class CategoryService {
         }
         CategoryEntity entity = new CategoryEntity();
         entity.setName(dto.getName());
-        entity.setStatus(Status.ACTIVE);
+        entity.setPositionStatus(PositionStatus.ACTIVE);
         categoryRepository.save(entity);
 
         dto.setCreatedDate(entity.getCreatedDate());

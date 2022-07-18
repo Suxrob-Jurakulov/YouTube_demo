@@ -1,6 +1,5 @@
-package com.company.dto;
+package com.company.dto.channel;
 
-import com.company.dto.channel.ChannelDTO;
 import com.company.enums.VisibleStatus;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
@@ -9,13 +8,14 @@ import lombok.Setter;
 @Getter
 @Setter
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class PlaylistDTO {
-    private String id;
+public class ChannelCreateDTO {
+
     private String name;
     private String description;
+    private String photo;
+    private String banner;
     private VisibleStatus status;
-    private Integer orderNum;
-    private String channel;
-    private ChannelDTO channelDTO;
-    private String review;
+    private String websiteUrl;
+    private String telegramUrl;
+    private String instagramUrl;
 }

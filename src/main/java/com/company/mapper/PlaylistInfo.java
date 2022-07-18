@@ -1,6 +1,5 @@
 package com.company.mapper;
 
-import com.company.enums.Status;
 import com.company.enums.VisibleStatus;
 
 public interface PlaylistInfo {

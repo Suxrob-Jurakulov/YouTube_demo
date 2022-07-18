@@ -1,9 +1,10 @@
 package com.company.service;
 
-import com.company.dto.AttachDTO;
+import com.company.dto.attach.AttachDTO;
 import com.company.entity.AttachEntity;
 import com.company.exp.ItemNotFoundException;
 import com.company.repository.AttachRepository;
+import com.company.util.VideoUtil;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -37,6 +38,8 @@ public class AttachService {
 
     @Autowired
     private AttachRepository attachRepository;
+    @Autowired
+    private VideoUtil videoUtil;
 
     public AttachDTO saveToSystem(MultipartFile file) {
         try {
@@ -60,10 +63,12 @@ public class AttachService {
             entity.setOriginalName(file.getOriginalFilename());
             entity.setSize(file.getSize());
             entity.setPath(pathFolder);
+            if (extension.equals("mp4")){
+                entity.setDuration(videoUtil.getDuration(file));
+            }
             attachRepository.save(entity);
-
             AttachDTO attachDTO = new AttachDTO();
-            attachDTO.setUrl(serverUrl + "attach/open/" + entity.getId());
+            attachDTO.setUrl(getFullUrl(entity.getId()));
             return attachDTO;
         } catch (IOException e) {
             e.printStackTrace();
@@ -75,6 +80,24 @@ public class AttachService {
     public byte[] show(String id) {
         Path path = Paths.get(getFileFullPath(get(id)));
         return Files.readAllBytes(path);
+    }
+
+
+    public byte[] openGeneral(String id) {
+
+        AttachEntity attach = get(id);
+
+        byte[] data;
+        try {
+            // fileName -> zari.jpg
+            String path = "attaches/" + attach.getPath() + "/" + id + "." + attach.getExtension();
+            Path file = Paths.get(path);
+            data = Files.readAllBytes(file);
+            return data;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return new byte[0];
     }
 
     @SneakyThrows
@@ -157,14 +180,10 @@ public class AttachService {
         return year + "/" + month + "/" + day; // 2022/04/23
     }
 
-    private AttachEntity get(String id) {
+    public AttachEntity get(String id) {
         return attachRepository.findById(id).orElseThrow(() -> {
             throw new ItemNotFoundException("Not found");
         });
-    }
-
-    public String getFileFullPath(AttachEntity entity) {
-        return attachFolder + entity.getPath() + "/" + entity.getId() + "." + entity.getExtension();
     }
 
     private String getExtension(String fileName) { // mp3/jpg/npg/mp4.....
@@ -196,7 +215,7 @@ public class AttachService {
 
     public AttachDTO getAttach(String channelAttachId) {
         Optional<AttachEntity> optional = attachRepository.findById(channelAttachId);
-        if (optional.isEmpty()){
+        if (optional.isEmpty()) {
             return null;
         }
         AttachEntity entity = optional.get();
@@ -205,4 +224,18 @@ public class AttachService {
         dto.setUrl(serverUrl + getFileFullPath(entity));
         return dto;
     }
+
+    public String getFileFullPath(AttachEntity entity) {
+        return attachFolder + entity.getPath() + "/" + entity.getId() + "." + entity.getExtension();
+    }
+
+    public String getFullUrl(String id){
+        Optional<AttachEntity> optional = attachRepository.findById(id);
+        if (optional.isEmpty()) {
+            return "";
+        }
+        AttachEntity entity = optional.get();
+        return serverUrl + "attach/public/open/" + entity.getId();
+    }
+
 }

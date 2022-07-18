@@ -1,7 +1,7 @@
 package com.company.controller;
 
-import com.company.dto.PasswordDTO;
-import com.company.dto.ProfileDTO;
+import com.company.dto.profile.PasswordDTO;
+import com.company.dto.profile.ProfileDTO;
 import com.company.service.ProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

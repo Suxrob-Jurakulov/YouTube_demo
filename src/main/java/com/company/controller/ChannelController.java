@@ -1,6 +1,7 @@
 package com.company.controller;
 
 import com.company.dto.channel.ChannelAttachDTO;
+import com.company.dto.channel.ChannelCreateDTO;
 import com.company.dto.channel.ChannelDTO;
 import com.company.dto.channel.ChannelStatusDTO;
 import com.company.service.ChannelService;
@@ -19,13 +20,13 @@ public class ChannelController {
     private ChannelService channelService;
 
     @PostMapping("/create")
-    public ResponseEntity<ChannelDTO> create(@RequestBody ChannelDTO dto) {
+    public ResponseEntity<ChannelDTO> create(@RequestBody ChannelCreateDTO dto) {
         ChannelDTO response = channelService.create(dto);
         return ResponseEntity.ok().body(response);
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<ChannelDTO> update(@PathVariable("id") String id, @RequestBody ChannelDTO dto) {
+    public ResponseEntity<ChannelDTO> update(@PathVariable("id") String id, @RequestBody ChannelCreateDTO dto) {
         ChannelDTO response = channelService.update(id, dto);
         return ResponseEntity.ok().body(response);
     }

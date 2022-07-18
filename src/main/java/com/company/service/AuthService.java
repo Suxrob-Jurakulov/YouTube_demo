@@ -1,14 +1,14 @@
 package com.company.service;
 
 import com.company.config.CustomUserDetails;
-import com.company.dto.AuthDTO;
-import com.company.dto.ProfileDTO;
-import com.company.dto.RegistrationDTO;
-import com.company.dto.ResponseInfoDTO;
+import com.company.dto.profile.AuthDTO;
+import com.company.dto.profile.ProfileDTO;
+import com.company.dto.profile.RegistrationDTO;
+import com.company.dto.profile.ResponseInfoDTO;
 import com.company.entity.AttachEntity;
 import com.company.entity.ProfileEntity;
 import com.company.enums.ProfileRole;
-import com.company.enums.Status;
+import com.company.enums.PositionStatus;
 import com.company.exp.BadRequestException;
 import com.company.exp.ItemNotFoundException;
 import com.company.repository.ProfileRepository;
@@ -44,7 +44,7 @@ public class AuthService {
         entity.setEmail(dto.getEmail());
         entity.setPassword(MD5Util.getMd5(dto.getPassword()));
         entity.setRole(ProfileRole.ROLE_USER);
-        entity.setStatus(Status.BLOCK);
+        entity.setStatus(PositionStatus.BLOCK);
 
         if (dto.getPhotoId() == null) {
             entity.setPhotoId(null);
@@ -96,7 +96,7 @@ public class AuthService {
         if (!emailService.verificationTime(profile.getEmail())) {
             return new ResponseInfoDTO(-1, "<h1>Time is out</h1>");
         }
-        profile.setStatus(Status.ACTIVE);
+        profile.setStatus(PositionStatus.ACTIVE);
         profileRepository.save(profile);
         return new ResponseInfoDTO(1, "<h1 style='align-text:center'>Success. Tabriklaymiz.</h1>");
     }

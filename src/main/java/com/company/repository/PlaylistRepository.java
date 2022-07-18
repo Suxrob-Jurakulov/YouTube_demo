@@ -11,6 +11,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 import javax.transaction.Transactional;
+import java.util.List;
+import java.util.Optional;
 
 public interface PlaylistRepository extends PagingAndSortingRepository<PlaylistEntity, String> {
 
@@ -38,5 +40,9 @@ public interface PlaylistRepository extends PagingAndSortingRepository<PlaylistE
             "     join channel c on p.channel_id = c.id " +
             "     join profile pr on c.profile_id = pr.id", nativeQuery = true)
     Page<PlaylistInfo> pagination(Pageable pageable);
+
+
+    @Query(value = "from PlaylistEntity p join VideoEntity v on v.playlistId = p.id where v.id = ?1")
+    Optional<PlaylistEntity> getPlaylistByVideoId(String id);
 }
 

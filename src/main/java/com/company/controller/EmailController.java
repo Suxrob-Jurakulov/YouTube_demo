@@ -19,10 +19,10 @@ public class EmailController {
     private EmailService emailService;
 
 
-    @GetMapping("/getEmail")
-    public ResponseEntity<?> getEmail(@RequestParam(value = "size", defaultValue = "5") Integer size,
-                                      @RequestParam(value = "page", defaultValue = "1") Integer page) {
-        PageImpl<EmailHistoryEntity> list = emailService.pagination(size, page);
+    @GetMapping("/adm/list")
+    public ResponseEntity<?> getEmail(@RequestParam(value = "page", defaultValue = "0") Integer size,
+                                      @RequestParam(value = "size", defaultValue = "5") Integer page) {
+        PageImpl<EmailHistoryEntity> list = emailService.pagination(page, size);
         return ResponseEntity.ok().body(list);
     }
 }

@@ -47,15 +47,8 @@ public class SpringConfig extends WebSecurityConfigurerAdapter {
         // Authorization
         http.authorizeRequests()
                 .antMatchers(AUTH_WHITELIST).permitAll()
-                .antMatchers("/auth/**").permitAll()
-                .antMatchers("/attach/public/**").permitAll()
-                .antMatchers("/video/public/**").permitAll()
-                .antMatchers("/category/public/*").permitAll()
-                .antMatchers("/attach/adm/*").hasRole("ADMIN")
-                .antMatchers("/email/*").hasRole("ADMIN")
-                .antMatchers("/channel/adm/*").hasRole("ADMIN")
-                .antMatchers("/category/adm/*").hasRole("ADMIN")
-                .antMatchers("/admin", "/admin/*").hasRole("ADMIN")
+                .antMatchers("/*/public/**").permitAll()
+                .antMatchers("/*/adm/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);

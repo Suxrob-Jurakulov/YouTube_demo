@@ -1,14 +1,15 @@
 package com.company.service;
 
-import com.company.dto.AttachDTO;
+import com.company.dto.attach.AttachDTO;
 import com.company.dto.channel.ChannelAttachDTO;
+import com.company.dto.channel.ChannelCreateDTO;
 import com.company.dto.channel.ChannelDTO;
 import com.company.dto.channel.ChannelStatusDTO;
 import com.company.entity.AttachEntity;
 import com.company.entity.ChannelEntity;
 import com.company.entity.ProfileEntity;
 import com.company.enums.ProfileRole;
-import com.company.enums.Status;
+import com.company.enums.PositionStatus;
 import com.company.exp.ItemNotFoundException;
 import com.company.exp.NotPermissionException;
 import com.company.repository.ChannelRepository;
@@ -31,11 +32,55 @@ public class ChannelService {
     @Autowired
     private AttachService attachService;
 
-    public ChannelDTO create(ChannelDTO dto) {
+    public ChannelDTO create(ChannelCreateDTO dto) {
         ChannelEntity entity = new ChannelEntity();
         insertAttach(dto, entity);
         channelRepository.save(dtoToEntity(dto, entity));
         return entityToDto(entity);
+    }
+
+    private ChannelEntity dtoToEntity(ChannelCreateDTO dto, ChannelEntity entity) {
+        Integer pId = profileService.getCurrentUser().getId();
+        entity.setName(dto.getName());
+        entity.setDescription(dto.getDescription());
+        entity.setProfileId(pId);
+        entity.setStatus(PositionStatus.ACTIVE);
+
+        if (dto.getInstagramUrl() != null) {
+            entity.setInstagramUrl(dto.getInstagramUrl());
+        }
+        if (dto.getTelegramUrl() != null) {
+            entity.setTelegramUrl(dto.getTelegramUrl());
+        }
+        if (dto.getWebsiteUrl() != null) {
+            entity.setWebsiteUrl(dto.getWebsiteUrl());
+        }
+        return entity;
+    }
+
+    private void insertAttach(ChannelCreateDTO dto, ChannelEntity entity) {
+        if (dto.getPhoto() != null) {
+            entity.setPhotoId(dto.getPhoto());
+        }
+        if (dto.getBanner() != null) {
+            entity.setBannerId(dto.getBanner());
+        }
+    }
+
+    public ChannelDTO update(String id, ChannelCreateDTO dto) {
+        ChannelEntity entity = get(id);
+        ProfileEntity profile = profileService.getCurrentUser();
+        if (!Objects.equals(entity.getProfileId(), profile.getId())) {
+            throw new NotPermissionException("This channel is not yours");
+        }
+        channelRepository.save(dtoToEntity(dto, entity));
+        return entityToDto(entity);
+    }
+
+    public ChannelEntity get(String id) {
+        return channelRepository.findById(id).orElseThrow(() -> {
+            throw new ItemNotFoundException("This channel not found");
+        });
     }
 
     private ChannelDTO entityToDto(ChannelEntity entity) {
@@ -52,50 +97,6 @@ public class ChannelService {
             dto.setPhoto(attachDTO);
         }
         return dto;
-    }
-
-    public ChannelDTO update(String id, ChannelDTO dto) {
-        ChannelEntity entity = get(id);
-        ProfileEntity profile = profileService.getCurrentUser();
-        if (!Objects.equals(entity.getProfileId(), profile.getId())) {
-            throw new NotPermissionException("This channel is not yours");
-        }
-        channelRepository.save(dtoToEntity(dto, entity));
-        return entityToDto(entity);
-    }
-
-    private ChannelEntity dtoToEntity(ChannelDTO dto, ChannelEntity entity) {
-        Integer pId = profileService.getCurrentUser().getId();
-        entity.setName(dto.getName());
-        entity.setDescription(dto.getDescription());
-        entity.setProfileId(pId);
-        entity.setStatus(Status.ACTIVE);
-
-        if (dto.getInstagramUrl() != null) {
-            entity.setInstagramUrl(dto.getInstagramUrl());
-        }
-        if (dto.getTelegramUrl() != null) {
-            entity.setTelegramUrl(dto.getTelegramUrl());
-        }
-        if (dto.getWebsiteUrl() != null) {
-            entity.setWebsiteUrl(dto.getWebsiteUrl());
-        }
-        return entity;
-    }
-
-    public ChannelEntity get(String id) {
-        return channelRepository.findById(id).orElseThrow(() -> {
-            throw new ItemNotFoundException("This channel not found");
-        });
-    }
-
-    private void insertAttach(ChannelDTO dto, ChannelEntity entity) {
-        if (dto.getPhoto() != null) {
-            entity.setPhotoId(dto.getPhoto().getId());
-        }
-        if (dto.getBanner() != null) {
-            entity.setPhotoId(dto.getBanner().getId());
-        }
     }
 
     public void updatePhoto(String id, ChannelAttachDTO dto) {

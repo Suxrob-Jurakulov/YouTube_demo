@@ -1,7 +1,7 @@
 package com.company.service;
 
-import com.company.dto.PlaylistDTO;
-import com.company.dto.ProfileDTO;
+import com.company.dto.playlist.PlaylistDTO;
+import com.company.dto.profile.ProfileDTO;
 import com.company.dto.channel.ChannelDTO;
 import com.company.dto.playlist.PlaylistStatusDTO;
 import com.company.entity.ChannelEntity;
@@ -172,5 +172,9 @@ public class PlaylistService {
             checkProfile(entity.getChannelId());
             playlistRepository.deletePlaylist(id);
         }
+    }
+
+    public PlaylistEntity getPlaylistByVideoId(String id){
+        return playlistRepository.getPlaylistByVideoId(id).orElseThrow(() -> null);
     }
 }

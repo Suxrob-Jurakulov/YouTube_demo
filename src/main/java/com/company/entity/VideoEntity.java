@@ -12,23 +12,18 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 @Table(name = "video")
-public class VideoEntity {
-    @Id
-    @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name = "system-uuid", strategy = "uuid")
-    private String id;
+public class VideoEntity extends BaseEntity{
+
     @Column(nullable = false)
     private String name;
     @Column(columnDefinition = "TEXT")
     private String description;
     @Column
-    private String time;
-    @Column(name = "created_date")
-    private LocalDateTime createdDate = LocalDateTime.now();
+    private Long time;
     @Column(name = "shared_count")
     private Integer sharedCount;
-    @Column
-    private Boolean visible = true;
+    @Column(name = "view_count")
+    private Integer viewCount;
     @Column
     @Enumerated(EnumType.STRING)
     private VisibleStatus status;
@@ -38,10 +33,29 @@ public class VideoEntity {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "attach_id", insertable = false, updatable = false)
     private AttachEntity attach;
+
+    @Column(name = "preview_id")
+    private String previewId;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "preview_id", insertable = false, updatable = false)
+    private AttachEntity preview;
     @Column(name = "channel_id")
     private String channelId;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "channel_id", insertable = false, updatable = false)
     private ChannelEntity channel;
+
+    @Column(name = "category_id")
+    private Integer categoryId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id", insertable = false, updatable = false)
+    private CategoryEntity category;
+
+    @Column(name = "playlist_id")
+    private String playlistId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "playlist_id", insertable = false, updatable = false)
+    private PlaylistEntity playlist;
+
 
 }

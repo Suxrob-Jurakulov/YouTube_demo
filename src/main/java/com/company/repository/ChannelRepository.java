@@ -1,7 +1,7 @@
 package com.company.repository;
 
 import com.company.entity.ChannelEntity;
-import com.company.enums.Status;
+import com.company.enums.PositionStatus;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
@@ -14,7 +14,7 @@ public interface ChannelRepository extends PagingAndSortingRepository<ChannelEnt
     @Transactional
     @Modifying
     @Query(value = "update ChannelEntity set status = ?1 where id = ?2")
-    void updateStatus(Status status, String id);
+    void updateStatus(PositionStatus status, String id);
 
     List<ChannelEntity> findByProfileIdAndVisible(Integer id, boolean b);
 

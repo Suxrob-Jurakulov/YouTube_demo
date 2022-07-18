@@ -12,26 +12,19 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 @Table(name = "playlist")
-public class PlaylistEntity {
-    @Id
-    @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name = "system-uuid", strategy = "uuid")
-    private String id;
+public class PlaylistEntity extends BaseEntity{
+
     @Column(nullable = false)
     private String name;
     @Column(columnDefinition = "TEXT")
     private String description;
     @Column(name = "order_num")
     private Integer orderNum;
-    @Column(name = "created_date")
-    private LocalDateTime createdDate = LocalDateTime.now();
     @Column(name = "updated_date")
     private LocalDateTime updatedDate;
     @Column
     @Enumerated(EnumType.STRING)
     private VisibleStatus status;
-    @Column
-    private Boolean visible = true;
 
     @Column(name = "channel_id")
     private String channelId;

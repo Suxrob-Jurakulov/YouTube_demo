@@ -1,6 +1,6 @@
 package com.company.entity;
 
-import com.company.enums.Status;
+import com.company.enums.PositionStatus;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
@@ -12,11 +12,8 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 @Table(name = "channel")
-public class ChannelEntity {
-    @Id
-    @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name = "system-uuid", strategy = "uuid")
-    private String id;
+public class ChannelEntity extends BaseEntity{
+
     @Column(nullable = false)
     private String name;
     @Column(columnDefinition = "TEXT")
@@ -29,11 +26,7 @@ public class ChannelEntity {
     private String instagramUrl;
     @Column
     @Enumerated(EnumType.STRING)
-    private Status status;
-    @Column
-    private Boolean visible = true;
-    @Column(name = "created_date")
-    private LocalDateTime createdDate = LocalDateTime.now();
+    private PositionStatus status;
 
     @Column(name = "profile_id")
     private Integer profileId;

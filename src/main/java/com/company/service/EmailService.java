@@ -78,7 +78,7 @@ public class EmailService {
         return emailHistoryRepository.countAllByEmail(email);
     }
 
-    public PageImpl<EmailHistoryEntity> pagination(Integer size, Integer page) {
+    public PageImpl<EmailHistoryEntity> pagination(Integer page, Integer size) {
 
         Sort sort= Sort.by(Sort.Direction.ASC, "id");
 

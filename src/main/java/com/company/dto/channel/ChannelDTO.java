@@ -1,7 +1,7 @@
 package com.company.dto.channel;
 
-import com.company.dto.AttachDTO;
-import com.company.dto.ProfileDTO;
+import com.company.dto.attach.AttachDTO;
+import com.company.dto.profile.ProfileDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;

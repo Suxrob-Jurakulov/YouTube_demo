@@ -1,9 +1,9 @@
 package com.company.controller;
 
-import com.company.dto.AuthDTO;
-import com.company.dto.ProfileDTO;
-import com.company.dto.RegistrationDTO;
-import com.company.dto.ResponseInfoDTO;
+import com.company.dto.profile.AuthDTO;
+import com.company.dto.profile.ProfileDTO;
+import com.company.dto.profile.RegistrationDTO;
+import com.company.dto.profile.ResponseInfoDTO;
 import com.company.service.AuthService;
 import com.company.util.JwtUtil;
 import io.swagger.annotations.Api;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @Api(tags = "Authorization and Registration")
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/auth/public")
 public class AuthController {
 
     @Autowired

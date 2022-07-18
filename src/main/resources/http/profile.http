@@ -11,3 +11,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTcxMzQyNzIsImV4cCI6MTY1N
 
 GET localhost:8080/profile/get_detail
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTcxMzExNjYsImV4cCI6MTY1NzM0NzE2NiwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjozfQ.aft-CwMpHZzILjlgHJGpsHeBJljxTHkIcduo4ug2rf0
+
+###
+PUT localhost:8080/profile/change_password
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTc3ODQ1NDYsImV4cCI6MTY1ODAwMDU0NiwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjoxfQ.b3x2UE7lSdr1CqmA9yt4bjw0CkuU6ElDZjJ6xHxf22w
+
+{
+  "oldPassword": "456",
+  "newPassword": "123"
+}

@@ -1,7 +1,7 @@
 package com.company.config;
 
 import com.company.entity.ProfileEntity;
-import com.company.enums.Status;
+import com.company.enums.PositionStatus;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -9,7 +9,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
-import java.util.List;
 
 public class CustomUserDetails implements UserDetails {
 
@@ -44,7 +43,7 @@ public class CustomUserDetails implements UserDetails {
 
     @Override
     public boolean isAccountNonLocked() {
-        return profile.getStatus().equals(Status.ACTIVE);
+        return profile.getStatus().equals(PositionStatus.ACTIVE);
     }
 
     @Override

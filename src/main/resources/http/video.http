@@ -1,13 +1,27 @@
 POST http://localhost:8080/video/public/create
-Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTgwNDc1NDIsImV4cCI6MTY1ODI2MzU0MiwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjoxN30.XYQj1BiDstVyHZQkDr1FHD_RiQxycLbHw99BEBEKVHM
 
---WebAppBoundary
-Content-Disposition: form-data; name="file"; filename="123.mp4"
-
-< C:\Users\SUKHROB\Desktop\123.mp4
+{
+  "name": "C++",
+  "description": "Dasturlash",
+  "attach": "67407aee-f7c6-4698-936d-07577a426d04",
+  "status": "PUBLIC",
+  "preview": "34bfbbf6-ee00-4bf5-9578-9ebd2e17048e",
+  "channelId": "8a8a850381fba7390181fba8eebf0000",
+  "playlist": "8a8a850381fbae7f0181fbae991c0000",
+  "categoryId": "1"
+}
 
 ###
 GET http://localhost:8080/attach/public/open/524551d1-ca59-4967-9df3-05abe4d9ea1c
 
 ###
 GET localhost:8080/attach/public/open/524551d1-ca59-4967-9df3-05abe4d9ea1c
+###
+GET localhost:8080/video/public/get_by_category?category=1&page=1&size=5
+###
+GET localhost:8080/video/get_video_by_id/4028ab17820be92101820beb7b2e0006
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTgwNzEzMTMsImV4cCI6MTY1ODI4NzMxMywiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjo3fQ.fmZz6PpUAH4y6Ldb9aSJ0IRNO3s7S5ulsiTSpPr7d4o
+
+

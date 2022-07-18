@@ -1,16 +1,12 @@
 package com.company.controller;
 
-import com.company.dto.PlaylistDTO;
-import com.company.dto.playlist.PlaylistInfoDTO;
+import com.company.dto.playlist.PlaylistDTO;
 import com.company.dto.playlist.PlaylistStatusDTO;
 import com.company.service.PlaylistService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageImpl;
-import org.springframework.data.repository.query.Param;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/playlist")

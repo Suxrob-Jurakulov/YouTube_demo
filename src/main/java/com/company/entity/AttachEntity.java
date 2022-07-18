@@ -12,9 +12,8 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "attach")
 public class AttachEntity {
+
     @Id
-    @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
 
     @Column
@@ -23,6 +22,8 @@ public class AttachEntity {
     private String originalName;
     @Column
     private Long size;
+    @Column
+    private Long duration;
     @Column
     private String path;
     @Column(name = "created_date")

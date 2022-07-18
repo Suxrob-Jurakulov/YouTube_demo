@@ -1,6 +1,6 @@
 package com.company.entity;
 
-import com.company.enums.Status;
+import com.company.enums.PositionStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,5 +21,5 @@ public class CategoryEntity {
     private LocalDateTime createdDate = LocalDateTime.now();
     @Column
     @Enumerated(EnumType.STRING)
-    private Status status;
+    private PositionStatus positionStatus;
 }

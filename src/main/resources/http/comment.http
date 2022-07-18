@@ -1,0 +1,16 @@
+POST localhost:8080/comment/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTgxMTUxODQsImV4cCI6MTY1ODMzMTE4NCwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjoxN30.OKZo1a3JpErQTmZiyfgHQb_uR7cWX4arsoaGrM5V5vw
+
+{
+  "content": "Ajoyib",
+  "videoId": "4028ab17820c10d001820c13ec57000b"
+}
+
+###
+GET localhost:8080/comment/adm/list
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTgxMTc0OTEsImV4cCI6MTY1ODMzMzQ5MSwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjoxfQ.1U_D2DerjFGBByIJezQtlYq_9NBenIFnaj8QUyXDGoI
+
+###
+GET localhost:8080/comment/adm/list_by_profileId/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTgxMjIyOTYsImV4cCI6MTY1ODMzODI5NiwiaXNzIjoiTWF6Z2kgcHJvZHVjdGlvbiIsImlkIjoxfQ.1T7QdXe7bH3nHxxUwcaDSDu_aWFXBUmtzWlt-IOAbiI

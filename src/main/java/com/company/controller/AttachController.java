@@ -1,6 +1,6 @@
 package com.company.controller;
 
-import com.company.dto.AttachDTO;
+import com.company.dto.attach.AttachDTO;
 import com.company.service.AttachService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -24,28 +24,17 @@ public class AttachController {
         return ResponseEntity.ok().body(dto);
     }
 
-    //  GET ATTACH - 1
+    //  GET ATTACH
     @GetMapping(value = "/public/open/{id}", produces = MediaType.IMAGE_PNG_VALUE)
-    public byte[] open(@PathVariable("id") String id) {
-        try {
-            return this.attachService.loadImage(id);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return new byte[0];
-        }
-    }
-
-    //  GET ATTACH - 2
-    @GetMapping(value = "/public/opens/{id}", produces = MediaType.IMAGE_PNG_VALUE)
     public ResponseEntity<?> show(@PathVariable("id") String id) {
         byte[] response = attachService.show(id);
         return ResponseEntity.ok().body(response);
     }
 
-    //  GET ATTACH - 3 -> by all type
-    @GetMapping(value = "/public/open_general/{fileName}", produces = MediaType.ALL_VALUE)
-    public byte[] open_general(@PathVariable("fileName") String fileName) {
-        return attachService.open_general(fileName);
+    //  GET ATTACH  by all type
+    @GetMapping(value = "/public/open_general/{id}", produces = MediaType.ALL_VALUE)
+    public byte[] open_general(@PathVariable("id") String id) {
+        return attachService.open_general(id);
     }
 
     @DeleteMapping("/adm/delete/{id}")

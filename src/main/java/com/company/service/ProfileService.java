@@ -1,9 +1,10 @@
 package com.company.service;
 
-import com.company.dto.PasswordDTO;
-import com.company.dto.ProfileDTO;
+import com.company.dto.attach.AttachDTO;
+import com.company.dto.profile.PasswordDTO;
+import com.company.dto.profile.ProfileDTO;
 import com.company.entity.ProfileEntity;
-import com.company.enums.Status;
+import com.company.enums.PositionStatus;
 import com.company.exp.BadRequestException;
 import com.company.exp.ItemNotFoundException;
 import com.company.repository.ProfileRepository;
@@ -57,7 +58,7 @@ public class ProfileService {
         ProfileEntity entity = new ProfileEntity();
         entity.setName(dto.getName());
         entity.setPassword(dto.getPassword());
-        entity.setStatus(Status.ACTIVE);
+        entity.setStatus(PositionStatus.ACTIVE);
         entity.setRole(dto.getRole());
         entity.setEmail(dto.getEmail());
         if (attachService.isExistAttach(dto.getPhotoId())) {
@@ -99,5 +100,17 @@ public class ProfileService {
             attachService.delete(forDelete);
         }
         return "Successfully changed photo";
+    }
+
+    public ProfileDTO getProfileDTO(Integer id){
+        ProfileEntity entity = get(id);
+        ProfileDTO dto = new ProfileDTO();
+        dto.setId(entity.getId());
+        dto.setName(entity.getName());
+        AttachDTO attachDTO = new AttachDTO();
+        attachDTO.setId(entity.getPhotoId());
+        attachDTO.setUrl(attachService.getFullUrl(entity.getPhotoId()));
+        dto.setPhoto(attachDTO);
+        return dto;
     }
 }
