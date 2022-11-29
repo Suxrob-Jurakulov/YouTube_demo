@@ -20,13 +20,13 @@ public class SubscriptionEntity {
     @Column(name = "profile_id")
     private Integer profileId;
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "profile_id", nullable = false)
+    @JoinColumn(name = "profile_id", nullable = false, updatable = false, insertable = false)
     private ProfileEntity profile;
 
     @Column(name = "channel_id")
     private String channelId;
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "channel_id", nullable = false)
+    @JoinColumn(name = "channel_id", updatable = false, insertable = false)
     private ChannelEntity channel;
 
 

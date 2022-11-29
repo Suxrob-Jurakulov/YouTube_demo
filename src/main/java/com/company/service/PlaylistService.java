@@ -136,7 +136,7 @@ public class PlaylistService {
         playlistInfoPage.getContent().forEach(entity -> {
             dtoList.add(playlistInfo(entity));
         });
-        return new PageImpl(dtoList, pageable, playlistInfoPage.getTotalElements());
+        return new PageImpl<>(dtoList, pageable, playlistInfoPage.getTotalElements());
     }
 
     public PlaylistDTO playlistInfo(PlaylistInfo entity) {

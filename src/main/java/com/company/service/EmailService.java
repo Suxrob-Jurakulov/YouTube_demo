@@ -30,7 +30,6 @@ public class EmailService {
     @Value("${server.url}")
     private String serverUrl;
 
-
     public void sendRegistrationEmail(String toAccount, Integer id) {
 
         String url = String.format("<a href='%sauth/email/verification/%s'>Verification Link</a>", serverUrl, JwtUtil.encode(id));
