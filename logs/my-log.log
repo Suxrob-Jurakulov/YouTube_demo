@@ -434,3 +434,6 @@ Caused by: org.hibernate.MappingException: Repeated column in mapping for entity
 2022-11-29 18:51:38  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-11-29 18:51:38  INFO  - org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcherServlet'
 2022-11-29 18:51:38  INFO  - org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 4 ms
+2022-11-29 18:58:44  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-29 18:58:44  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-11-29 18:58:44  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
