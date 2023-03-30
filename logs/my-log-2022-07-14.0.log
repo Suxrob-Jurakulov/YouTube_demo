@@ -1,0 +1,829 @@
+2022-07-14 12:00:23  INFO  - com.company.YouTubeApplication  - Starting YouTubeApplication using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 19100 (C:\Users\SUKHROB\IdeaProjects\YouTube\target\classes started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 12:00:23  INFO  - com.company.YouTubeApplication  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 12:00:24  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 12:00:24  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 49 ms. Found 7 JPA repository interfaces.
+2022-07-14 12:00:25  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-14 12:00:25  INFO  - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-14 12:00:25  INFO  - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-14 12:00:25  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-14 12:00:25  INFO  - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 1448 ms
+2022-07-14 12:00:25  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 12:00:25  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 12:00:25  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 12:00:25  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 12:00:25  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 12:00:25  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 12:00:25  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 12:00:26  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 12:00:26  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 12:00:27  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 12:00:27  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@72c29d87, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2835b3d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f97e3de, org.springframework.security.web.header.HeaderWriterFilter@6b3da23f, org.springframework.security.web.authentication.logout.LogoutFilter@2cdd156b, com.company.config.JwtTokenFilter@261099e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f53295e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43c64d6f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20e9b10b, org.springframework.security.web.session.SessionManagementFilter@3b62c51e, org.springframework.security.web.access.ExceptionTranslationFilter@703947bd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e987f59]
+2022-07-14 12:00:27  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-14 12:00:28  INFO  - com.company.YouTubeApplication  - Started YouTubeApplication in 4.916 seconds (JVM running for 5.777)
+2022-07-14 12:24:24  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-14 12:24:24  INFO  - org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcherServlet'
+2022-07-14 12:24:24  INFO  - org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 2 ms
+2022-07-14 12:31:05  WARN  - org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 0, SQLState: 23502
+2022-07-14 12:31:05  ERROR - org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - ОШИБКА: значение NULL в столбце "key" отношения "channel" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (8a8a850381fb823e0181fb9e4e9c0000, 2022-07-14 12:31:04.981509, Dasturlash bo'yicha, null, null, Java, ACTIVE, null, t, null, null, null, 6).
+2022-07-14 12:31:05  INFO  - org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2022-07-14 12:31:05  ERROR - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+org.postgresql.util.PSQLException: ОШИБКА: значение NULL в столбце "key" отношения "channel" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (8a8a850381fb823e0181fb9e4e9c0000, 2022-07-14 12:31:04.981509, Dasturlash bo'yicha, null, null, Java, ACTIVE, null, t, null, null, null, 6).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2365)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:355)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:490)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:408)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:167)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:135)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:46)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3375)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3908)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:489)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3290)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2425)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy2/jdk.proxy2.$Proxy132.save(Unknown Source)
+	at com.company.service.ChannelService.create(ChannelService.java:37)
+	at com.company.controller.ChannelController.create(ChannelController.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.company.config.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:53)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-07-14 12:32:36  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 12:32:36  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 12:32:36  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-07-14 12:34:48  INFO  - com.company.YouTubeApplication  - Starting YouTubeApplication using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 22900 (C:\Users\SUKHROB\IdeaProjects\YouTube\target\classes started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 12:34:48  INFO  - com.company.YouTubeApplication  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 12:34:49  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 12:34:49  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 45 ms. Found 7 JPA repository interfaces.
+2022-07-14 12:34:49  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-14 12:34:49  INFO  - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-14 12:34:49  INFO  - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-14 12:34:49  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-14 12:34:49  INFO  - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 1453 ms
+2022-07-14 12:34:49  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 12:34:49  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 12:34:49  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 12:34:49  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 12:34:50  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 12:34:50  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 12:34:50  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 12:34:50  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 12:34:50  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 12:34:51  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 12:34:51  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1181526e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5134a7d6, org.springframework.security.web.context.SecurityContextPersistenceFilter@2be208db, org.springframework.security.web.header.HeaderWriterFilter@496004e3, org.springframework.security.web.authentication.logout.LogoutFilter@3df54fd5, com.company.config.JwtTokenFilter@4b7c0f39, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ae90cb9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f8a29ca, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b8a8abc, org.springframework.security.web.session.SessionManagementFilter@27ea552d, org.springframework.security.web.access.ExceptionTranslationFilter@6ae5e1cf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22e253c7]
+2022-07-14 12:34:51  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-14 12:34:51  INFO  - com.company.YouTubeApplication  - Started YouTubeApplication in 4.053 seconds (JVM running for 4.594)
+2022-07-14 12:35:04  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-14 12:35:04  INFO  - org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcherServlet'
+2022-07-14 12:35:04  INFO  - org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 0 ms
+2022-07-14 12:35:04  WARN  - org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 0, SQLState: 23502
+2022-07-14 12:35:04  ERROR - org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - ОШИБКА: значение NULL в столбце "key" отношения "channel" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (8a8a850381fba1be0181fba1f6860000, 2022-07-14 12:35:04.577229, Dasturlash bo'yicha, null, null, Java, ACTIVE, null, t, null, null, null, 6).
+2022-07-14 12:35:04  INFO  - org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2022-07-14 12:35:04  ERROR - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+org.postgresql.util.PSQLException: ОШИБКА: значение NULL в столбце "key" отношения "channel" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (8a8a850381fba1be0181fba1f6860000, 2022-07-14 12:35:04.577229, Dasturlash bo'yicha, null, null, Java, ACTIVE, null, t, null, null, null, 6).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2365)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:355)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:490)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:408)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:167)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:135)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:46)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3375)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3908)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:489)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3290)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2425)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy2/jdk.proxy2.$Proxy132.save(Unknown Source)
+	at com.company.service.ChannelService.create(ChannelService.java:37)
+	at com.company.controller.ChannelController.create(ChannelController.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.company.config.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:53)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-07-14 12:40:19  WARN  - org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - SQL Error: 0, SQLState: 23502
+2022-07-14 12:40:19  ERROR - org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - ОШИБКА: значение NULL в столбце "key" отношения "channel" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (8a8a850381fba1be0181fba6c5980001, 2022-07-14 12:40:19.736525, Dasturlash bo'yicha, null, null, Java, ACTIVE, null, t, null, null, null, 6).
+2022-07-14 12:40:19  INFO  - org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl  - HHH000010: On release of batch it still contained JDBC statements
+2022-07-14 12:40:19  ERROR - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]  - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+org.postgresql.util.PSQLException: ОШИБКА: значение NULL в столбце "key" отношения "channel" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (8a8a850381fba1be0181fba6c5980001, 2022-07-14 12:40:19.736525, Dasturlash bo'yicha, null, null, Java, ACTIVE, null, t, null, null, null, 6).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2365)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:355)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:490)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:408)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:167)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:135)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:46)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3375)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3908)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:489)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3290)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2425)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy2/jdk.proxy2.$Proxy132.save(Unknown Source)
+	at com.company.service.ChannelService.create(ChannelService.java:37)
+	at com.company.controller.ChannelController.create(ChannelController.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.company.config.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:53)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-07-14 12:40:26  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 12:40:26  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 12:40:26  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-07-14 12:40:47  INFO  - com.company.YouTubeApplication  - Starting YouTubeApplication using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 7320 (C:\Users\SUKHROB\IdeaProjects\YouTube\target\classes started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 12:40:47  INFO  - com.company.YouTubeApplication  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 12:40:48  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 12:40:48  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 36 ms. Found 7 JPA repository interfaces.
+2022-07-14 12:40:48  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-14 12:40:48  INFO  - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-14 12:40:48  INFO  - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-14 12:40:48  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-14 12:40:48  INFO  - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 1194 ms
+2022-07-14 12:40:48  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 12:40:49  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 12:40:49  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 12:40:49  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 12:40:49  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 12:40:49  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 12:40:49  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 12:40:50  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 12:40:50  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 12:40:50  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 12:40:50  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@669e730d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b3e4253, org.springframework.security.web.context.SecurityContextPersistenceFilter@22f0e329, org.springframework.security.web.header.HeaderWriterFilter@78e34499, org.springframework.security.web.authentication.logout.LogoutFilter@73483d4b, com.company.config.JwtTokenFilter@40416321, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20ddc780, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67062a93, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13b5598b, org.springframework.security.web.session.SessionManagementFilter@7e1ce99c, org.springframework.security.web.access.ExceptionTranslationFilter@4e93d23e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6491006]
+2022-07-14 12:40:50  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-14 12:40:51  INFO  - com.company.YouTubeApplication  - Started YouTubeApplication in 3.852 seconds (JVM running for 4.334)
+2022-07-14 12:41:30  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-14 12:41:30  INFO  - org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcherServlet'
+2022-07-14 12:41:30  INFO  - org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 0 ms
+2022-07-14 12:47:58  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 12:47:58  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 12:47:58  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-07-14 12:48:44  INFO  - com.company.YouTubeApplication  - Starting YouTubeApplication using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 20784 (C:\Users\SUKHROB\IdeaProjects\YouTube\target\classes started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 12:48:44  INFO  - com.company.YouTubeApplication  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 12:48:44  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 12:48:45  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 39 ms. Found 7 JPA repository interfaces.
+2022-07-14 12:48:45  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-14 12:48:45  INFO  - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-14 12:48:45  INFO  - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-14 12:48:45  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-14 12:48:45  INFO  - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 1189 ms
+2022-07-14 12:48:45  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 12:48:45  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 12:48:45  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 12:48:45  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 12:48:45  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 12:48:45  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 12:48:45  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 12:48:46  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 12:48:46  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 12:48:46  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 12:48:47  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@578781f7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7bbd944e, org.springframework.security.web.context.SecurityContextPersistenceFilter@46bff388, org.springframework.security.web.header.HeaderWriterFilter@47800bd7, org.springframework.security.web.authentication.logout.LogoutFilter@775fec4, com.company.config.JwtTokenFilter@4add4dff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6b3da23f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3bdc8975, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22e253c7, org.springframework.security.web.session.SessionManagementFilter@df34b01, org.springframework.security.web.access.ExceptionTranslationFilter@1fc4b8d6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@377cc0f8]
+2022-07-14 12:48:47  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-14 12:48:47  INFO  - com.company.YouTubeApplication  - Started YouTubeApplication in 3.823 seconds (JVM running for 4.333)
+2022-07-14 12:48:52  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-14 12:48:52  INFO  - org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcherServlet'
+2022-07-14 12:48:52  INFO  - org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 0 ms
+2022-07-14 12:51:30  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 12:51:30  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 12:51:30  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-07-14 12:59:24  INFO  - com.company.YouTubeApplication  - Starting YouTubeApplication using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 6128 (C:\Users\SUKHROB\IdeaProjects\YouTube\target\classes started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 12:59:24  INFO  - com.company.YouTubeApplication  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 12:59:24  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 12:59:25  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 35 ms. Found 7 JPA repository interfaces.
+2022-07-14 12:59:25  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-14 12:59:25  INFO  - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-14 12:59:25  INFO  - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-14 12:59:25  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-14 12:59:25  INFO  - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 1182 ms
+2022-07-14 12:59:25  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 12:59:25  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 12:59:25  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 12:59:25  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 12:59:25  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 12:59:25  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 12:59:25  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 12:59:26  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 12:59:26  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 12:59:26  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 12:59:27  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1181526e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5134a7d6, org.springframework.security.web.context.SecurityContextPersistenceFilter@2be208db, org.springframework.security.web.header.HeaderWriterFilter@496004e3, org.springframework.security.web.authentication.logout.LogoutFilter@3df54fd5, com.company.config.JwtTokenFilter@4b7c0f39, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ae90cb9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f8a29ca, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b8a8abc, org.springframework.security.web.session.SessionManagementFilter@27ea552d, org.springframework.security.web.access.ExceptionTranslationFilter@6ae5e1cf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22e253c7]
+2022-07-14 12:59:27  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-14 12:59:27  INFO  - com.company.YouTubeApplication  - Started YouTubeApplication in 3.827 seconds (JVM running for 4.315)
+2022-07-14 13:00:26  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-14 13:00:26  INFO  - org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcherServlet'
+2022-07-14 13:00:26  INFO  - org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 0 ms
+2022-07-14 13:01:32  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 13:01:32  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 13:01:32  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-07-14 13:01:38  INFO  - com.company.YouTubeApplication  - Starting YouTubeApplication using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 12180 (C:\Users\SUKHROB\IdeaProjects\YouTube\target\classes started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 13:01:38  INFO  - com.company.YouTubeApplication  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 13:01:39  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 13:01:39  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 50 ms. Found 7 JPA repository interfaces.
+2022-07-14 13:01:39  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-14 13:01:39  INFO  - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-14 13:01:39  INFO  - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-14 13:01:39  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-14 13:01:39  INFO  - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 1500 ms
+2022-07-14 13:01:39  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 13:01:39  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 13:01:39  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 13:01:40  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 13:01:40  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 13:01:40  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 13:01:40  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 13:01:41  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 13:01:41  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 13:01:42  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 13:01:43  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4960b819, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e987f59, org.springframework.security.web.context.SecurityContextPersistenceFilter@65871cfd, org.springframework.security.web.header.HeaderWriterFilter@325a781c, org.springframework.security.web.authentication.logout.LogoutFilter@5b5f61cc, com.company.config.JwtTokenFilter@641cea11, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3bdc8975, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b62c51e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@192aeae2, org.springframework.security.web.session.SessionManagementFilter@5058fefb, org.springframework.security.web.access.ExceptionTranslationFilter@3fe21d0e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@247415be]
+2022-07-14 13:01:43  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-14 13:01:44  INFO  - com.company.YouTubeApplication  - Started YouTubeApplication in 6.549 seconds (JVM running for 7.072)
+2022-07-14 13:01:50  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-14 13:01:50  INFO  - org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcherServlet'
+2022-07-14 13:01:50  INFO  - org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 0 ms
+2022-07-14 13:04:20  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 13:04:20  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 13:04:20  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-07-14 13:04:26  INFO  - com.company.YouTubeApplication  - Starting YouTubeApplication using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 17280 (C:\Users\SUKHROB\IdeaProjects\YouTube\target\classes started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 13:04:26  INFO  - com.company.YouTubeApplication  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 13:04:27  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 13:04:27  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 40 ms. Found 7 JPA repository interfaces.
+2022-07-14 13:04:27  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-14 13:04:27  INFO  - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-14 13:04:27  INFO  - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-14 13:04:27  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-14 13:04:27  INFO  - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 1215 ms
+2022-07-14 13:04:27  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 13:04:27  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 13:04:27  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 13:04:27  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 13:04:28  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 13:04:28  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 13:04:28  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 13:04:28  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 13:04:28  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 13:04:29  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 13:04:29  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@690c3b1f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d722bff, org.springframework.security.web.context.SecurityContextPersistenceFilter@7db679, org.springframework.security.web.header.HeaderWriterFilter@46bff388, org.springframework.security.web.authentication.logout.LogoutFilter@40da1644, com.company.config.JwtTokenFilter@1b53e6fc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f97e3de, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31885b4b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72c29d87, org.springframework.security.web.session.SessionManagementFilter@5ed463b7, org.springframework.security.web.access.ExceptionTranslationFilter@496004e3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@68a7f77a]
+2022-07-14 13:04:29  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-14 13:04:30  INFO  - com.company.YouTubeApplication  - Started YouTubeApplication in 3.864 seconds (JVM running for 4.342)
+2022-07-14 13:04:43  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-14 13:04:43  INFO  - org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcherServlet'
+2022-07-14 13:04:43  INFO  - org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 0 ms
+2022-07-14 13:13:40  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 13:13:40  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 13:13:40  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-07-14 13:13:49  INFO  - com.company.YouTubeApplication  - Starting YouTubeApplication using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 22500 (C:\Users\SUKHROB\IdeaProjects\YouTube\target\classes started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 13:13:49  INFO  - com.company.YouTubeApplication  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 13:13:50  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 13:13:50  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 46 ms. Found 7 JPA repository interfaces.
+2022-07-14 13:13:50  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-14 13:13:50  INFO  - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-14 13:13:50  INFO  - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-14 13:13:51  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-14 13:13:51  INFO  - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 1320 ms
+2022-07-14 13:13:51  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 13:13:51  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 13:13:51  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 13:13:51  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 13:13:51  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 13:13:51  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 13:13:51  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 13:13:52  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 13:13:52  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 13:13:52  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 13:13:53  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5134a7d6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b8a8abc, org.springframework.security.web.context.SecurityContextPersistenceFilter@5ed463b7, org.springframework.security.web.header.HeaderWriterFilter@df34b01, org.springframework.security.web.authentication.logout.LogoutFilter@5ff8d76f, com.company.config.JwtTokenFilter@25b402ea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b62c51e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f93a8f6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72851503, org.springframework.security.web.session.SessionManagementFilter@7a57c5d9, org.springframework.security.web.access.ExceptionTranslationFilter@f9979cf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2480acc3]
+2022-07-14 13:13:53  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-14 13:13:53  INFO  - com.company.YouTubeApplication  - Started YouTubeApplication in 4.252 seconds (JVM running for 4.794)
+2022-07-14 13:13:58  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-14 13:13:58  INFO  - org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcherServlet'
+2022-07-14 13:13:58  INFO  - org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 0 ms
+2022-07-14 13:15:05  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 13:15:05  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 13:15:05  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-07-14 13:16:50  INFO  - com.company.YouTubeApplication  - Starting YouTubeApplication using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 22748 (C:\Users\SUKHROB\IdeaProjects\YouTube\target\classes started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 13:16:50  INFO  - com.company.YouTubeApplication  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 13:16:51  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 13:16:51  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 40 ms. Found 7 JPA repository interfaces.
+2022-07-14 13:16:51  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-14 13:16:51  INFO  - org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-14 13:16:51  INFO  - org.apache.catalina.core.StandardEngine  - Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-14 13:16:51  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-14 13:16:51  INFO  - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext  - Root WebApplicationContext: initialization completed in 1193 ms
+2022-07-14 13:16:51  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 13:16:51  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 13:16:52  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 13:16:52  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 13:16:52  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 13:16:52  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 13:16:52  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 13:16:53  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 13:16:53  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 13:16:53  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 13:16:54  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1181526e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5134a7d6, org.springframework.security.web.context.SecurityContextPersistenceFilter@2be208db, org.springframework.security.web.header.HeaderWriterFilter@496004e3, org.springframework.security.web.authentication.logout.LogoutFilter@3df54fd5, com.company.config.JwtTokenFilter@4b7c0f39, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ae90cb9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f8a29ca, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b8a8abc, org.springframework.security.web.session.SessionManagementFilter@27ea552d, org.springframework.security.web.access.ExceptionTranslationFilter@6ae5e1cf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22e253c7]
+2022-07-14 13:16:54  INFO  - org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-14 13:16:54  INFO  - com.company.YouTubeApplication  - Started YouTubeApplication in 4.391 seconds (JVM running for 4.884)
+2022-07-14 13:16:58  INFO  - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-14 13:16:58  INFO  - org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcherServlet'
+2022-07-14 13:16:58  INFO  - org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 0 ms
+2022-07-14 13:23:55  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 13:23:55  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 13:23:55  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-07-14 14:32:40  INFO  - com.company.YouTubeApplicationTests  - Starting YouTubeApplicationTests using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 15576 (started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 14:32:40  INFO  - com.company.YouTubeApplicationTests  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 14:32:41  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 14:32:41  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 71 ms. Found 7 JPA repository interfaces.
+2022-07-14 14:32:42  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 14:32:42  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 14:32:42  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 14:32:42  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 14:32:42  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 14:32:42  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 14:32:43  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 14:32:43  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 14:32:43  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 14:32:44  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 14:32:45  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@cfe72b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12f933c7, org.springframework.security.web.context.SecurityContextPersistenceFilter@78de0f6f, org.springframework.security.web.header.HeaderWriterFilter@1a67bcaf, org.springframework.security.web.authentication.logout.LogoutFilter@71b6edfb, com.company.config.JwtTokenFilter@1c571162, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7fb313e3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63e81ac6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@156d7556, org.springframework.security.web.session.SessionManagementFilter@5e0b7f58, org.springframework.security.web.access.ExceptionTranslationFilter@3816efab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@657e7e8]
+2022-07-14 14:32:46  INFO  - com.company.YouTubeApplicationTests  - Started YouTubeApplicationTests in 7.119 seconds (JVM running for 8.331)
+2022-07-14 14:32:47  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 14:32:47  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 14:32:47  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-07-14 14:43:41  INFO  - com.company.YouTubeApplicationTests  - Starting YouTubeApplicationTests using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 4220 (started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 14:43:41  INFO  - com.company.YouTubeApplicationTests  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 14:43:42  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 14:43:42  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 62 ms. Found 7 JPA repository interfaces.
+2022-07-14 14:43:42  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 14:43:42  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 14:43:43  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 14:43:43  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 14:43:43  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 14:43:43  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 14:43:43  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 14:43:44  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 14:43:44  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 14:43:45  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 14:43:45  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3e3d8e6c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7fd3197b, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e5febe9, org.springframework.security.web.header.HeaderWriterFilter@2740585b, org.springframework.security.web.authentication.logout.LogoutFilter@6d7a343f, com.company.config.JwtTokenFilter@6e664075, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e9e4468, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@588614f9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d2ce035, org.springframework.security.web.session.SessionManagementFilter@21f421b8, org.springframework.security.web.access.ExceptionTranslationFilter@c651286, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@53630682]
+2022-07-14 14:43:47  INFO  - com.company.YouTubeApplicationTests  - Started YouTubeApplicationTests in 6.27 seconds (JVM running for 7.353)
+2022-07-14 14:43:47  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 14:43:47  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 14:43:47  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-07-14 14:44:06  INFO  - com.company.YouTubeApplicationTests  - Starting YouTubeApplicationTests using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 17484 (started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 14:44:06  INFO  - com.company.YouTubeApplicationTests  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 14:44:07  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 14:44:07  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 59 ms. Found 7 JPA repository interfaces.
+2022-07-14 14:44:08  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 14:44:08  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 14:44:08  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 14:44:08  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 14:44:08  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 14:44:08  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 14:44:09  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 14:44:09  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 14:44:09  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 14:44:10  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 14:44:11  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3b44ed3c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1df83569, org.springframework.security.web.context.SecurityContextPersistenceFilter@21f421b8, org.springframework.security.web.header.HeaderWriterFilter@40304938, org.springframework.security.web.authentication.logout.LogoutFilter@2a49753, com.company.config.JwtTokenFilter@3e0b1f03, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e04c89d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e9e4468, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@439047ef, org.springframework.security.web.session.SessionManagementFilter@4f4b7a2e, org.springframework.security.web.access.ExceptionTranslationFilter@5101b9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e76ade9]
+2022-07-14 14:44:12  INFO  - com.company.YouTubeApplicationTests  - Started YouTubeApplicationTests in 6.219 seconds (JVM running for 7.303)
+2022-07-14 14:44:12  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 14:44:12  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 14:44:12  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-07-14 14:45:45  INFO  - com.company.YouTubeApplicationTests  - Starting YouTubeApplicationTests using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 13804 (started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 14:45:45  INFO  - com.company.YouTubeApplicationTests  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 14:45:46  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 14:45:47  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 70 ms. Found 7 JPA repository interfaces.
+2022-07-14 14:45:47  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 14:45:47  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 14:45:47  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 14:45:48  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 14:45:48  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 14:45:48  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 14:45:48  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 14:45:49  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 14:45:49  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 14:45:49  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 14:45:50  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3da12ba4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64b0ec4a, org.springframework.security.web.context.SecurityContextPersistenceFilter@45775a15, org.springframework.security.web.header.HeaderWriterFilter@2e04c89d, org.springframework.security.web.authentication.logout.LogoutFilter@d0538b3, com.company.config.JwtTokenFilter@2e96489b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5825932c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@304cad3a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b949de4, org.springframework.security.web.session.SessionManagementFilter@771ede0d, org.springframework.security.web.access.ExceptionTranslationFilter@77430c79, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7da59f6e]
+2022-07-14 14:45:51  INFO  - com.company.YouTubeApplicationTests  - Started YouTubeApplicationTests in 6.24 seconds (JVM running for 7.291)
+2022-07-14 14:45:52  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 14:45:52  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 14:45:52  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-07-14 14:51:15  INFO  - com.company.YouTubeApplicationTests  - Starting YouTubeApplicationTests using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 1952 (started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 14:51:15  INFO  - com.company.YouTubeApplicationTests  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 14:51:16  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 14:51:16  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 70 ms. Found 7 JPA repository interfaces.
+2022-07-14 14:51:16  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 14:51:17  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 14:51:17  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 14:51:17  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 14:51:17  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 14:51:17  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 14:51:17  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 14:51:18  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 14:51:18  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 14:51:19  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 14:51:20  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1b4ade78, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45fa7fb7, org.springframework.security.web.context.SecurityContextPersistenceFilter@6c9e7af2, org.springframework.security.web.header.HeaderWriterFilter@e0c03bd, org.springframework.security.web.authentication.logout.LogoutFilter@45775a15, com.company.config.JwtTokenFilter@9a74a93, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2740585b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f3e6876, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32eeef08, org.springframework.security.web.session.SessionManagementFilter@7da40bf4, org.springframework.security.web.access.ExceptionTranslationFilter@4df8443f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6037748a]
+2022-07-14 14:51:21  INFO  - com.company.YouTubeApplicationTests  - Started YouTubeApplicationTests in 6.38 seconds (JVM running for 7.409)
+2022-07-14 14:51:21  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 14:51:21  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 14:51:21  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-07-14 14:58:22  INFO  - com.company.YouTubeApplicationTests  - Starting YouTubeApplicationTests using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 10592 (started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 14:58:22  INFO  - com.company.YouTubeApplicationTests  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 14:58:23  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 14:58:23  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 58 ms. Found 7 JPA repository interfaces.
+2022-07-14 14:58:24  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 14:58:24  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 14:58:24  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 14:58:24  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 14:58:24  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 14:58:24  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 14:58:25  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 14:58:25  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 14:58:25  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 14:58:26  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 14:58:27  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6a087c72, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3894d1b1, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e9e4468, org.springframework.security.web.header.HeaderWriterFilter@257da215, org.springframework.security.web.authentication.logout.LogoutFilter@3b9c386d, com.company.config.JwtTokenFilter@6094ad4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@140fa482, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@771ede0d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f6b1f19, org.springframework.security.web.session.SessionManagementFilter@2e04c89d, org.springframework.security.web.access.ExceptionTranslationFilter@6c9e7af2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b97f195]
+2022-07-14 14:58:28  INFO  - com.company.YouTubeApplicationTests  - Started YouTubeApplicationTests in 6.208 seconds (JVM running for 7.294)
+2022-07-14 14:58:28  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 14:58:28  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 14:58:28  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
+2022-07-14 15:11:45  INFO  - com.company.YouTubeApplicationTests  - Starting YouTubeApplicationTests using Java 17.0.2 on LAPTOP-0A2TJCAS with PID 2204 (started by SUKHROB in C:\Users\SUKHROB\IdeaProjects\YouTube)
+2022-07-14 15:11:45  INFO  - com.company.YouTubeApplicationTests  - No active profile set, falling back to 1 default profile: "default"
+2022-07-14 15:11:46  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-14 15:11:46  INFO  - org.springframework.data.repository.config.RepositoryConfigurationDelegate  - Finished Spring Data repository scanning in 54 ms. Found 7 JPA repository interfaces.
+2022-07-14 15:11:46  INFO  - org.hibernate.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-14 15:11:46  INFO  - org.hibernate.Version  - HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-14 15:11:46  INFO  - org.hibernate.annotations.common.Version  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-14 15:11:47  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Starting...
+2022-07-14 15:11:47  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Start completed.
+2022-07-14 15:11:47  INFO  - org.hibernate.dialect.Dialect  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-07-14 15:11:47  WARN  - org.hibernate.id.UUIDHexGenerator  - HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2022-07-14 15:11:48  INFO  - org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-14 15:11:48  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 15:11:48  WARN  - org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-14 15:11:49  INFO  - org.springframework.security.web.DefaultSecurityFilterChain  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7ab8c972, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76cad511, org.springframework.security.web.context.SecurityContextPersistenceFilter@5ab70df7, org.springframework.security.web.header.HeaderWriterFilter@52f71d2, org.springframework.security.web.authentication.logout.LogoutFilter@533690d, com.company.config.JwtTokenFilter@3986b9e9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a0f1f9d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f14eb51, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ff52a71, org.springframework.security.web.session.SessionManagementFilter@1bd53c5c, org.springframework.security.web.access.ExceptionTranslationFilter@2e17a9e6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17d25e1d]
+2022-07-14 15:11:50  INFO  - com.company.YouTubeApplicationTests  - Started YouTubeApplicationTests in 5.674 seconds (JVM running for 6.572)
+2022-07-14 15:11:50  INFO  - org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-14 15:11:50  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown initiated...
+2022-07-14 15:11:50  INFO  - com.zaxxer.hikari.HikariDataSource  - HikariPool-1 - Shutdown completed.
